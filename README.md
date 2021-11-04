@@ -18,3 +18,7 @@
 ## Step 8 - Nodemon: configure package.json e create file src/app.js | run app: 'npm run start'
 
 ## Step 9 - First endpoint
+
+## Step 10 - Create acount in Mongo Atlas and configure Mongoose connection
+
+## Step 11 - Create endpoint for register user

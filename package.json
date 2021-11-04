@@ -2,7 +2,7 @@
   "name": "node_auth_jwt",
   "version": "1.0.0",
   "description": "API NodeJS with authentication JWT and users in Mongo Atlas",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon src/app.js"

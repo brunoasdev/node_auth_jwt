@@ -6,8 +6,65 @@ const jwt = require('jsonwebtoken')
 
 const app = express()
 
+//Config JSON request
+app.use(express.json())
+
+//Models
+const User = require('./models/User')
+
+//Open Route - Public Route
 app.get('/', (req, res) => {
-    res.status(200).json({ msg: 'Welcome to API' })
+    res.status(200).json({ msg: "Welcome to API" })
+})
+
+//Register user
+app.post('/auth/register', async (req, res) => {
+    const { name, email, password, confirmpassword } = req.body
+
+    //Validations
+    if(!name) {
+        return res.status(422).json({ msg: "Name is mandatory" })
+    }
+
+    if(!email) {
+        return res.status(422).json({ msg: "Email is mandatory" })
+    }
+
+    if(!password) {
+        return res.status(422).json({ msg: "Password is mandatory" })
+    }
+
+    if(password != confirmpassword) {
+        return res.status(422).json({ msg: "Passwords do not match" })
+    }
+
+    //Check if user exists
+    const userExists = await User.findOne({ email: email })
+
+    if(userExists) {
+        return res.status(422).json({ msg: "Please use another email" })
+    }
+
+    //Create password
+    const salt = await bcrypt.genSalt(12)
+    const passwordHash = await bcrypt.hash(password, salt)
+
+    //Create user
+    const user = new User({
+        name,
+        email,
+        password,
+    })
+
+    try {
+
+        await user.save()
+        res.status(201).json({ msg: "User created successfully." })
+
+    }catch(error) {
+        console.log(error)
+        res.status(500).json({ msg: "There was an error on the server. Try later" })
+    }
 })
 
 //credentials
