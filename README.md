@@ -14,3 +14,5 @@
 ## Step 6 - Install required libraries: npm install bcrypt dotenv express jsonwebtoken mongoose
 
 ## Step 7 - Install library nodemon for live reload from application
+
+## Step 8 - Nodemon: configure package.json e create file src/app.js | run app: 'npm run start'

@@ -4,15 +4,16 @@
   "description": "# In Ubuntu ## Step 1 - Install NodeJS: curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash - && sudo apt-get install -y nodejs",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/app.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/brunoasdev/node_auth_jwt.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["api", "nodejs", "oauth2", "jwt", "mongo atlas"],
+  "author": "Bruno de Almeida Silva",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/brunoasdev/node_auth_jwt/issues"
   },
