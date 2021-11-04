@@ -11,4 +11,6 @@
 
 ## Step 5 - Open this directory by Visual Studio Code (...node_auth_jwt$ code .)
 
-## Step 6 - install required libraries: npm install bcrypt dotenv express jsonwebtoken mongoose
+## Step 6 - Install required libraries: npm install bcrypt dotenv express jsonwebtoken mongoose
+
+## Step 7 - Install library nodemon for live reload from application
