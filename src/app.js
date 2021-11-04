@@ -10,4 +10,14 @@ app.get('/', (req, res) => {
     res.status(200).json({ msg: 'Welcome to API' })
 })
 
-app.listen(3000)
+//credentials
+const dbUser = process.env.DB_USER
+const dbPasswd = process.env.DB_PASS
+
+mongoose
+    .connect(`mongodb+srv://${dbUser}:${dbPasswd}@cluster0.ljtwj.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`)
+    .then(() => { 
+        app.listen(3000)
+        console.log("Database connected!") 
+    })
+    .catch((err) => console.log(err))
