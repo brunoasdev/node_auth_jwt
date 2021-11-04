@@ -10,3 +10,5 @@
 ## Step 4 - Create the project by terminal: npm init -y 
 
 ## Step 5 - Open this directory by Visual Studio Code (...node_auth_jwt$ code .)
+
+## Step 6 - install required libraries: npm install bcrypt dotenv express jsonwebtoken mongoose
