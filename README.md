@@ -16,3 +16,5 @@
 ## Step 7 - Install library nodemon for live reload from application
 
 ## Step 8 - Nodemon: configure package.json e create file src/app.js | run app: 'npm run start'
+
+## Step 9 - First endpoint

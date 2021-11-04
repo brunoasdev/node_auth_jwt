@@ -1,7 +1,7 @@
 {
   "name": "node_auth_jwt",
   "version": "1.0.0",
-  "description": "# In Ubuntu ## Step 1 - Install NodeJS: curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash - && sudo apt-get install -y nodejs",
+  "description": "API NodeJS with authentication JWT and users in Mongo Atlas",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
